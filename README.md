@@ -1,6 +1,3 @@
-# Next-word-prediction-using-LSTM
-This project builds a Next Word Prediction model using an LSTM in PyTorch. It tokenizes text, learns word sequences, and predicts the next word based on context, showcasing how LSTMs capture language patterns for text generation and autocomplete tasks.
-
 # Next Word Prediction using LSTM
 
 ## 📌 Project Overview
@@ -18,7 +15,16 @@ This project implements a **Next Word Prediction** model using an **LSTM (Long S
 - NLTK
 - NumPy
 
-**LSTM Model**
+### **Data Preparation**
+- The text corpus is defined as a string.
+- NLTK is used for tokenization.
+- Tokens are converted into numerical indices.
+
+### **Dataset and DataLoader**
+- A custom `Dataset` class is implemented to return (input_sequence, target_word) pairs.
+- PyTorch `DataLoader` is used for batching during training.
+
+## **LSTM Model**
 - The model includes:
   - An Embedding Layer to convert word indices into dense vectors.
   - An LSTM Layer to capture temporal relationships.
